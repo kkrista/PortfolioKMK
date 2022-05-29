@@ -8,9 +8,7 @@ const toggleMenu = () => {
 };
 
 menuToggleButton.addEventListener('click', toggleMenu);
-
 // !REMOVE ACTIVE CLASS FROM AND ICON ON LINK CLICK
-
 const removeActiveLinkClass = e => {
     if(e.target.classList.contains('list-link')){
         menuElement.classList.remove('active');
@@ -18,9 +16,7 @@ const removeActiveLinkClass = e => {
     }
 }
 document.addEventListener('click', removeActiveLinkClass);
-
 // !TOGGLE THEME AND STORE SELECTION WITHIN LOCAL STORAGE
-
 const themeToggleButton = document.querySelector('.theme-toggle-button');
 const bodyElement = document.body;
 const currentTheme = localStorage.getItem('darkTheme');
@@ -38,7 +34,24 @@ const toggleTheme = () => {
         localStorage.removeItem('darkTheme');
     }
 };
-
 themeToggleButton.addEventListener('click', toggleTheme);
 
 // !SCROLL REVEAL
+const sr = ScrollReveal({
+    distance: '50px',
+    duration: 1500,
+    easing: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'
+});
+
+sr.reveal('.main-title', {origin: 'top'});
+sr.reveal('.scroll-reveal-left', {origin: 'left'});
+sr.reveal('.scroll-reveal-right', {origin: 'right'});
+sr.reveal('.scroll-reveal-item', {interval: 250});
+sr.reveal('.section-title, .section-subtitle-container', {
+    origin:'top',
+    interval: 250
+});
+sr.reveal('.portfolio-card', {interval: 500});
+sr.reveal('.form-container, .footer', {
+    origin:'top',
+});
