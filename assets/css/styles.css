@@ -250,11 +250,11 @@ textarea{
 .inline-image{
     width: 7rem;
     height: 7rem;
-    background: url('../images/codingrose.jpg') top center no-repeat;
+    background: url('../images/flower1.png') top center no-repeat;
     background-size: cover;
     border-radius: 50%;
     border-bottom-left-radius: 0;
-    margin: 0 1.5rem;
+    margin: 0 0.6rem;
 }
 
 .dark-theme .has-sparkles::before,
@@ -282,16 +282,17 @@ textarea{
     content: '';
     position: absolute;
     top: 50%;
-    width: 5vw;
-    max-width: 5rem;
-    height: 5vw;
-    max-height: 5rem;
-    background: url('../images/sparkle_alt.png') center no-repeat;
+    width: 2vw;
+    max-width: 2rem;
+    height: 2vw;
+    max-height: 2rem;
+    /* background: url('../images/sparkle_alt.png') center no-repeat; */
+    background: url('../images/sparkle.png') center no-repeat;
     background-size: cover;
 }
 
 .dark-theme .has-sparkles-alt::after{
-    background: url('../images/sparkle_alt_light.png') center no-repeat;
+    background: url('../images/sparkle_light.png') center no-repeat;
     background-size: cover;
 }
 
@@ -450,7 +451,7 @@ textarea{
 
 .card-image{
     height: 30rem;
-    background-color: grey;
+    background-color: rgb(233, 233, 233);
     margin-bottom: 2.5rem;
     border-radius: .4rem;
     display: flex;
@@ -526,7 +527,7 @@ textarea{
     z-index: -1;
     transform: scale(0);
     transform-origin: bottom left;
-    transition: transform .5s cubiz-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: transform .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 .large-button-fill::before{
@@ -577,7 +578,7 @@ textarea{
 
 .required-field{
     font-size: 1rem;
-    color: purple;
+    color: rgb(236, 20, 200);
     transform: translateY(-.8rem);
 }
 
